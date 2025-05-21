@@ -1,0 +1,25 @@
+<%= form_with(model: restaurant, local: true) do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+
+    <div>
+      <%= f.label :phone_number %>
+      <%= f.text_field :phone_number %>
+  </div>
+
+  <div>
+    <%= f.label :category %>
+    <%= f.select :category, Restaurant::CATEGORIES %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
